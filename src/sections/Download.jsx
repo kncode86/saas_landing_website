@@ -1,5 +1,5 @@
 import { Element } from 'react-scroll'
-import {links} from '../constants/index'
+import {links, logos} from '../constants/index'
 import { Marker } from '../components/Marker' 
 
 const Download = () => {
@@ -62,6 +62,13 @@ const Download = () => {
                         </div>
                     </div>
                 </div>
+                <ul className='mt-24 flex justify-center max-lg:hidden'>
+                    {logos.map(({id, url, width, height, title }) => (
+                        <li key={id} className='mx-10'>
+                            <img src={url} alt={title} width={width} height={height} />
+                        </li>
+                    ))}
+                </ul>
             </div>
         </Element>
     </section>
